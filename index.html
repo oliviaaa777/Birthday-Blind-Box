@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b24"><meta name="description" content="点击四张神秘卡片，揭晓为你准备的生日礼物。">
+  <title>生日盲盒抽取 · 每日商店</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="refinements.css">
+</head>
+<body>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+ <symbol id="legendary" viewBox="0 0 50 50"><path d="M15 5H35L44 33L25 46L6 33Z M19 12H31L36 30L25 37L14 30Z"/></symbol>
+ <symbol id="premium" viewBox="0 0 50 50"><path d="M5 7H45L25 44Z M14 13H36L25 34Z"/></symbol>
+ <symbol id="deluxe" viewBox="0 0 50 50"><path d="M20 5Q25 1 30 5L45 20Q49 25 45 30L30 45Q25 49 20 45L5 30Q1 25 5 20Z M21 13Q25 9 29 13L37 21Q41 25 37 29L29 37Q25 41 21 37L13 29Q9 25 13 21Z"/></symbol>
+ <symbol id="gift" viewBox="0 0 32 32"><path d="M4 14H28V19H4ZM6 21H14V30H6ZM18 21H26V30H18ZM14 11H18V30H14ZM14 9L7 2L4 5L11 11ZM18 9L24 2L27 5L21 11Z"/></symbol>
+ <symbol id="home" viewBox="0 0 32 32"><path d="M3 14L16 3L29 14V29H3Z"/><path d="M10 15L16 21L22 15L19 24H13Z" fill="white"/></symbol>
+ <symbol id="friends" viewBox="0 0 32 32"><path d="M4 7H24V25H17L12 30V25H4Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 12H13V15H10ZM17 12H20V15H17ZM9 23L14 18L20 23ZM10 2H30V21H27V5H10Z"/></symbol>
+ <symbol id="person" viewBox="0 0 32 32"><path d="M3 10L16 4L29 10L16 16ZM8 16L16 20L24 16L21 26L16 31L11 26Z"/></symbol>
+ <symbol id="share" viewBox="0 0 32 32"><path d="M18 7H5V28H27V18M15 20V14Q15 8 22 8H29M23 2L29 8L23 14" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
+</defs></svg>
+<div class="app">
+ <header class="masthead"><h1>生日盲盒抽取</h1></header>
+ <main class="shop">
+  <nav class="top-tabs" aria-label="商店栏目"><span class="selected">商店<i></i></span></nav>
+  <div class="shop-tools"><div class="shop-options"><span class="pill">每日商店</span></div><div class="countdown" aria-label="今日剩余时间"><span id="hours">14</span><small>时</small><span id="minutes">38</span><small>分</small><span id="seconds">07</span><small>秒</small></div><button class="share" aria-label="分享礼物商店" title="分享链接"><svg><use href="#share"/></svg></button></div>
+  <section class="cards" aria-label="四张生日礼物盲卡"></section>
+ </main>
+ <footer class="bottom-nav" aria-label="生日祝福"><span><svg><use href="#home"/></svg>生日</span><span><svg><use href="#friends"/></svg>快乐</span><button class="reset" aria-label="重新盖上四张卡片" title="重新盖牌"><img src="assets/birthday-cake.webp" alt="卡通生日蛋糕" width="160" height="160"></button><span class="active"><svg><use href="#gift"/></svg>快来</span><span><svg><use href="#person"/></svg>抽吧</span></footer>
+</div>
+<p class="sr-only" id="announcement" aria-live="polite"></p><div class="toast" role="status" hidden></div>
+<dialog id="reset-dialog"><form method="dialog"><h2>再拆一次礼物？</h2><p>四张卡片将重新盖上，礼物不会改变。</p><div><button value="cancel">取消</button><button value="confirm" class="confirm">重新盖牌</button></div></form></dialog>
+<script src="app.js"></script>
+</body></html>

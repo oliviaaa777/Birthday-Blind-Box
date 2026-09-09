@@ -1,0 +1,17 @@
+.masthead{height:25.09cqw;display:flex;align-items:center;position:relative;background:#1d223a url('assets/birthday-banner.webp') center/cover no-repeat;padding:0 6.8cqw 2cqw}
+.masthead h1{position:relative;z-index:1;margin:0;font-size:6.1cqw;line-height:1.4;letter-spacing:.25cqw;font-weight:750;color:#fff5ed;text-shadow:0 2px 20px #13182aaa}
+.shop{margin-top:-3.4cqw}
+.top-tabs{justify-content:flex-start;padding-left:9.7cqw}
+.bottom-nav .reset{background:none;overflow:visible;width:16cqw;height:16cqw;margin-top:-3.9cqw}
+.reset img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 3px #f3b9c440);transition:transform .2s ease}
+.reset:hover img{transform:translateY(-2px) rotate(-4deg)}
+.reset:active img{transform:scale(.93)}
+.front:before{opacity:.07;background-image:repeating-linear-gradient(45deg,transparent 0 26px,#c5d1d7 27px,transparent 28px),repeating-linear-gradient(-45deg,transparent 0 26px,#c5d1d7 27px,transparent 28px);background-size:auto;mix-blend-mode:normal}
+.reference-motion{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:8;pointer-events:none;animation:motion-out 2.65s linear both}
+.revealing .product{animation:product-in .5s 1.97s cubic-bezier(.2,.7,.2,1) both;transform:none}
+.revealing .product.dior{transform:rotate(-18deg)}
+.revealing .description{animation:details-in .35s 2.3s ease both}
+.revealing .tier-row{animation:details-in .3s 2.08s ease both;opacity:0}
+.revealed .tier-row{opacity:1}
+@keyframes motion-out{0%,73%{opacity:1}88%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.reference-motion{display:none}.revealing .product,.revealing .description,.revealing .tier-row{animation:details-in .15s both}}
